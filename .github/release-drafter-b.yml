@@ -1,0 +1,51 @@
+name-template: 'v$NEXT_PATCH_VERSION-B 🌈'
+tag-template: 'v$NEXT_PATCH_VERSION'
+references:
+  - main
+categories:
+  - title: '✨ Features'
+    labels:
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bug'
+  - title: '📝 Documentation'
+    labels:
+      - 'documentation'
+  - title: '🔒 Security'
+    labels:
+      - 'security'
+  - title: '👷 Technical'
+    labels:
+      - 'technical'
+  - title: '🏭 Libraries update'
+    label: 'dependencies'
+autolabeler:
+  - label: 'enhancement'
+    title:
+      - '/feat(\(.*\))?:/'
+  - label: 'bug'
+    title:
+      - '/fix(\(.*\))?:/'
+  - label: 'documentation'
+    title:
+      - '/docs(\(.*\))?:/'
+  - label: 'test'
+    title:
+      - '/test(\(.*\))?:/'
+  - label: 'security'
+    title:
+      - '/secu(\(.*\))?:/'
+  - label: 'technical'
+    title:
+      - '/tech(\(.*\))?:/'
+  - label: 'skip-changelog'
+    title:
+      - '/skip(\(.*\))?:/'
+exclude-labels:
+  - 'skip-changelog'
+  - 'test'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+template: |
+  ## Changes
+  $CHANGES
