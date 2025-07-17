@@ -1,4 +1,4 @@
-name: Release Drafter
+name: Release Drafter B
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - uses: release-drafter/release-drafter@v5
         with:
           name-template:
-          config-name: release-drafter-master.yml # located in .github/ in default branch
+          config-name: release-drafter-b.yml # located in .github/ in default branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
