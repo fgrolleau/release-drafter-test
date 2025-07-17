@@ -1,7 +1,7 @@
 name-template: 'v$NEXT_PATCH_VERSION-A 🌈'
 tag-template: 'v$NEXT_PATCH_VERSION-A'
 references:
-  - main
+  - a
 categories:
   - title: '✨ Features'
     labels:
